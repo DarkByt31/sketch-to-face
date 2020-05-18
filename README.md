@@ -8,7 +8,7 @@ After 2 epochs training, from randomly chosen test set:
 | :---: | :---: | :---: |
 | <img src="examples/input_1.jpg" width="256px"/> | <img src="examples/output_1.jpg" width="256px"/> | <img src="examples/truth_1.jpg" width="256px"/> |
 | <img src="examples/input_2.jpg" width="256px"/> | <img src="examples/output_2.jpg" width="256px"/> | <img src="examples/truth_2.jpg" width="256px"/> |
-| <img src="examples/input_5.jpg" width="256px"/> | <img src="examples/output_5.jpg" width="256px"/> | <img src="examples/truth_5.jpg" width="256px"/> |
+| <img src="examples/input_5.png" width="256px"/> | <img src="examples/output_5.png" width="256px"/> | <img src="examples/truth_5.png" width="256px"/> |
 | <img src="examples/input_4.jpg" width="256px"/> | <img src="examples/output_4.jpg" width="256px"/> | <img src="examples/truth_4.jpg" width="256px"/> |
 
 ## Usage
@@ -32,11 +32,15 @@ To train a model with downloaded data:
     $ python main.py
 
 To train using tfrecords in google colab
-    Generate tfrecord using
-`    $ python tfrecord_gen.py -create_test --num_records 3 --train_size total_number_of_train_examples`
-    To start training
-`    $ python main.py --use_tfrecord=True --train_data_size=total_number_of_train_examples`
-    **Note:** Also use --steps_per_test=5000 --steps_per_ckpt=10000 when training with large dataset to save space and speed up training
+Generate tfrecord using
+    
+    $ python tfrecord_gen.py -create_test --num_records 3 --train_size total_number_of_train_examples
+
+To start training
+    
+    $ python main.py --use_tfrecord=True --train_data_size=total_number_of_train_examples
+    
+**Note:** Also use --steps_per_test=5000 --steps_per_ckpt=10000 when training with large dataset to save space and speed up training
 
 To test the model with a canvas UI:
 
